@@ -1,0 +1,374 @@
+/* Import fonts first */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+/* Then Tailwind directives */
+@import "tailwindcss";
+
+@theme {
+  /* Font Families */
+  --font-inter: "Inter", sans-serif;
+  --font-edu-sa: "Edu SA Beginner", cursive;
+  --font-mono: "Roboto Mono", monospace;
+
+  /* Base colors */
+  --color-white: #fff;
+--color-black: #000;
+--color-transparent: #ffffff00;
+
+/* Rich black colors */
+--color-richblack-5: #f1f2ff;
+--color-richblack-25: #dbddea;
+--color-richblack-50: #c5c7d4;
+--color-richblack-100: #afb2bf;
+--color-richblack-200: #999daa;
+--color-richblack-300: #838894;
+--color-richblack-400: #6e727f;
+--color-richblack-500: #585d69;
+--color-richblack-600: #424854;
+--color-richblack-700: #2c333f;
+--color-richblack-800: #161d29;
+--color-richblack-900: #000814;
+
+/* Rich blue colors */
+--color-richblue-5: #ecf5ff;
+--color-richblue-25: #c6d6e1;
+--color-richblue-50: #a0b7c3;
+--color-richblue-100: #7a98a6;
+--color-richblue-200: #537988;
+--color-richblue-300: #2d5a6a;
+--color-richblue-400: #073b4c;
+--color-richblue-500: #063544;
+--color-richblue-600: #042e3b;
+--color-richblue-700: #032833;
+--color-richblue-800: #01212a;
+--color-richblue-900: #001b22;
+
+/* Blue colors */
+--color-blue-5: #eaf5ff;
+--color-blue-25: #b4daec;
+--color-blue-50: #7ec0d9;
+--color-blue-100: #47a5c5;
+--color-blue-200: #118ab2;
+--color-blue-300: #0f7a9d;
+--color-blue-400: #0c6a87;
+--color-blue-500: #0a5a72;
+--color-blue-600: #074b5d;
+--color-blue-700: #053b48;
+--color-blue-800: #022b32;
+--color-blue-900: #001b1d;
+
+/* Caribbean green colors */
+--color-caribbeangreen-5: #c1fffd;
+--color-caribbeangreen-25: #83f1de;
+--color-caribbeangreen-50: #44e4bf;
+--color-caribbeangreen-100: #06d6a0;
+--color-caribbeangreen-200: #05bf8e;
+--color-caribbeangreen-300: #05a77b;
+--color-caribbeangreen-400: #049069;
+--color-caribbeangreen-500: #037957;
+--color-caribbeangreen-600: #026144;
+--color-caribbeangreen-700: #014a32;
+--color-caribbeangreen-800: #01321f;
+--color-caribbeangreen-900: #001b0d;
+
+/* Brown colors */
+--color-brown-5: #fff4c4;
+--color-brown-25: #ffe395;
+--color-brown-50: #ffd166;
+--color-brown-100: #e7bc5b;
+--color-brown-200: #cfa64f;
+--color-brown-300: #b89144;
+--color-brown-400: #a07c39;
+--color-brown-500: #88662d;
+--color-brown-600: #705122;
+--color-brown-700: #593c17;
+--color-brown-800: #41260b;
+--color-brown-900: #291100;
+
+/* Pink colors */
+--color-pink-5: #fff1f1;
+--color-pink-25: #fbc7d1;
+--color-pink-50: #f79cb0;
+--color-pink-100: #f37290;
+--color-pink-200: #ef476f;
+--color-pink-300: #d43d63;
+--color-pink-400: #ba3356;
+--color-pink-500: #9f294a;
+--color-pink-600: #841e3e;
+--color-pink-700: #691432;
+--color-pink-800: #4f0a25;
+--color-pink-900: #340019;
+
+/* Yellow colors */
+--color-yellow-5: #fff970;
+--color-yellow-25: #ffe83d;
+--color-yellow-50: #ffd60a;
+--color-yellow-100: #e7c009;
+--color-yellow-200: #cfab08;
+--color-yellow-300: #b69507;
+--color-yellow-400: #9e8006;
+--color-yellow-500: #866a04;
+--color-yellow-600: #6e5503;
+--color-yellow-700: #553f02;
+--color-yellow-800: #3d2a01;
+--color-yellow-900: #251400;
+
+/* Pure greys */
+--color-puregreys-5: #f9f9f9;
+--color-puregreys-25: #e2e2e2;
+--color-puregreys-50: #cccccc;
+--color-puregreys-100: #b5b5b5;
+--color-puregreys-200: #9e9e9e;
+--color-puregreys-300: #888888;
+--color-puregreys-400: #717171;
+--color-puregreys-500: #5b5b5b;
+--color-puregreys-600: #444444;
+--color-puregreys-700: #2d2d2d;
+--color-puregreys-800: #171717;
+--color-puregreys-900: #141414;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #afb2bf;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #000814;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #afb2bf;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+*:active::-webkit-scrollbar-thumb,
+*:focus::-webkit-scrollbar-thumb,
+*:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+/* Hide default styling of details/summary */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* https://10015.io/tools/css-loader-generator */
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 9px solid #f1f2ff;
+  animation: spinner-bulqg1 0.8s infinite linear alternate,
+    spinner-oaa3wk 1.6s infinite linear;
+}
+
+.codeblock1 {
+  width: 372.95px;
+  height: 257.05px;
+  border-radius: 100%;
+  left: calc(50% - 372.95px / 2 - 76.53px);
+  top: calc(50% - 257.05px / 2 - 47.47px);
+  background: linear-gradient(
+    123.77deg,
+    #8a2be2 -6.46%,
+    #ffa500 59.04%,
+    #f8f8ff 124.53%
+  );
+  opacity: 0.2;
+  filter: blur(34px);
+  transform: matrix(1, 0, -0.03, 1, 0, 0);
+}
+.codeblock2 {
+  position: absolute;
+  width: 372.95px;
+  height: 257.05px;
+  left: calc(50% - 372.95px / 2 - 76.53px);
+  top: calc(50% - 257.05px / 2 - 47.47px);
+  border-radius: 100%;
+  background: linear-gradient(
+    118.19deg,
+    #1fa2ff -3.62%,
+    #12d8fa 50.44%,
+    #a6ffcb 104.51%
+  );
+  opacity: 0.2;
+  filter: blur(34px);
+  transform: matrix(1, 0, -0.03, 1, 0, 0);
+}
+.code-border {
+  border: 2px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(to right bottom, #ffffff38, #ffffff00);
+  background: linear-gradient(
+    111.93deg,
+    rgba(14, 26, 45, 0.24) -1.4%,
+    rgba(17, 30, 50, 0.38) 104.96%
+  );
+  /* backdrop-filter: blur(26px); */
+}
+.homepage_bg {
+  background: url("../src/assets/Images/bghome.svg");
+  /* background-size: contain; */
+}
+
+@keyframes spinner-bulqg1 {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+  }
+
+  12.5% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%
+    );
+  }
+
+  25% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 100%,
+      100% 100%,
+      100% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+
+  62.5% {
+    clip-path: polygon(
+      50% 50%,
+      100% 0,
+      100% 0%,
+      100% 0%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+
+  75% {
+    clip-path: polygon(
+      50% 50%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+
+  100% {
+    clip-path: polygon(
+      50% 50%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+}
+
+@keyframes spinner-oaa3wk {
+  0% {
+    transform: scaleY(1) rotate(0deg);
+  }
+
+  49.99% {
+    transform: scaleY(1) rotate(135deg);
+  }
+
+  50% {
+    transform: scaleY(-1) rotate(0deg);
+  }
+
+  100% {
+    transform: scaleY(-1) rotate(-135deg);
+  }
+}
+
+/* For conditional coloring of icons in dashboard sidebar */
+.active-icon {
+  fill: #ffd60a !important;
+  color: #ffd60a !important;
+}
+
+.inactive-icon {
+  fill: #838894;
+  color: #838894;
+}
+
+/* Buttons */
+.yellowButton {
+  @apply cursor-pointer rounded-md bg-yellow-50 px-[20px] py-[8px] font-semibold text-richblack-900;
+}
+
+/* Swiper CSS Starts */
+/* .swiper {
+  max-width: 1200px;
+  width: 91.66%;
+  height: 185px;
+  margin: 50px 0px;
+} */
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+/* .swiper-slide {
+  @apply bg-richblack-800 text-richblack-25 p-3 text-[14px];
+} */
+/* Swiper CSS Ends */
+
+.blackButton {
+  @apply cursor-pointer rounded-md bg-richblack-800 px-[20px] py-[8px] font-semibold text-richblack-5;
+}
+.lable-style {
+  @apply text-[14px] text-richblack-5;
+}
+.form-style {
+  @apply rounded-lg bg-richblack-700 p-3 text-[16px] leading-[24px] text-richblack-5 shadow-[0_1px_0_0] shadow-white/50 placeholder:text-richblack-400 focus:outline-none;
+}
+.section_heading {
+  @apply text-2xl font-bold text-richblack-5 lg:text-4xl;
+}
