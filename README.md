@@ -18,7 +18,7 @@
 
 ## 🧰 Tech Stack
 
-- **Frontend:** React, Tailwind CSS, ShadCN  
+- **Frontend:** React, Tailwind CSS  
 - **Backend:** Node.js, Express.js  
 - **Database:** MongoDB  
 - **AI:** Gemini API + Custom LLM  
