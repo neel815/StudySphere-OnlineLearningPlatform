@@ -8,8 +8,7 @@
 - 🎥 Upload, sell, and buy courses  
 - 🧠 AI chatbot (Gemini API + Custom LLM)  
 - 📊 Course performance tracking (Graphs)  
-- 💬 Chat with AI & other students  
-- 🔴 Live lecture hosting  
+- 💬 Chat with AI & other students
 - ✉️ Email OTP Authentication  
 - 💳 Razorpay payment integration  
 - ⭐ Course reviews and ratings  
