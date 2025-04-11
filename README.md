@@ -2,8 +2,6 @@
 
 **StudySphere** is a full-featured online learning EdTech platform built with the **MERN stack**. It allows students and teachers to interact, upload/buy/sell courses, attend live lectures, and chat using AI. It also includes a custom **LLM model** to recommend personalized courses.
 
-## Drive video Link : https://drive.google.com/drive/folders/1G2lpZhofjUhOz6j6AaFZRiH3KAe56vjR
-
 ## 🚀 Features
 
 - 🧑‍🏫 Teacher & Student authentication  
